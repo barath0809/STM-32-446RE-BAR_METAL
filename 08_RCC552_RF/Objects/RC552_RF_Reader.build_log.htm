@@ -1,0 +1,224 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.30.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: hfgfgfgfgfgfgy yryyu, kljp, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.30.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.14
+Assembler:       Armasm.exe V6.14
+Linker/Locator:  ArmLink.exe V6.14
+Library Manager: ArmAr.exe V6.14
+Hex Converter:   FromElf.exe V6.14
+CPU DLL:         SARMCM3.DLL V5.30.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      UL2CM3.DLL V1.163.3.0
+Dialog DLL:      TCM.DLL V1.42.0.0
+ 
+<h2>Project:</h2>
+C:\Users\INNOLIA F\OneDrive\Documents\STM32_BARATH_BM_Pro\08_RCC552_RF\RC552_RF_Reader.uvprojx
+Project File Date:  07/10/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.14', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'RC522_RF'
+assembling startup_stm32f10x_md.s...
+main.c(12): warning: implicit declaration of function 'systick_init_ms' is invalid in C99 [-Wimplicit-function-declaration]
+                systick_init_ms(16000000);
+                ^
+main.c(13): warning: implicit declaration of function 'rc522_init' is invalid in C99 [-Wimplicit-function-declaration]
+                rc522_init();
+                ^
+main.c(14): warning: implicit declaration of function 'lcd_init' is invalid in C99 [-Wimplicit-function-declaration]
+                lcd_init();
+                ^
+main.c(15): warning: implicit declaration of function 'setCursor' is invalid in C99 [-Wimplicit-function-declaration]
+                setCursor(0,0);
+                ^
+main.c(16): warning: implicit declaration of function 'lcd_send_string' is invalid in C99 [-Wimplicit-function-declaration]
+                lcd_send_string("RFID RC522 with");
+                ^
+main.c(21): warning: implicit declaration of function 'delay' is invalid in C99 [-Wimplicit-function-declaration]
+                delay(2000);
+                ^
+main.c(22): warning: implicit declaration of function 'lcd_clear' is invalid in C99 [-Wimplicit-function-declaration]
+                lcd_clear();
+                ^
+main.c(25): warning: implicit declaration of function 'rc522_checkCard' is invalid in C99 [-Wimplicit-function-declaration]
+                                if(rc522_checkCard(rfid_id))
+                                   ^
+main.c(46): error: no member named 'AHB1ENR' in 'RCC_TypeDef'
+        RCC->AHB1ENR |=RCC_AHB1ENR_GPIOAEN; //enable clock forn gpio a
+        ~~~  ^
+main.c(46): error: use of undeclared identifier 'RCC_AHB1ENR_GPIOAEN'
+        RCC->AHB1ENR |=RCC_AHB1ENR_GPIOAEN; //enable clock forn gpio a
+                       ^
+main.c(48): error: no member named 'MODER' in 'GPIO_TypeDef'
+        GPIOA->MODER |=GPIOA_MODER_MODE5_1|GPIOA_MODER_MODE6_1|GPIOA_MODER_MODE7_1;
+        ~~~~~  ^
+main.c(48): error: use of undeclared identifier 'GPIOA_MODER_MODE5_1'
+        GPIOA->MODER |=GPIOA_MODER_MODE5_1|GPIOA_MODER_MODE6_1|GPIOA_MODER_MODE7_1;
+                       ^
+main.c(48): error: use of undeclared identifier 'GPIOA_MODER_MODE6_1'
+        GPIOA->MODER |=GPIOA_MODER_MODE5_1|GPIOA_MODER_MODE6_1|GPIOA_MODER_MODE7_1;
+                                           ^
+main.c(48): error: use of undeclared identifier 'GPIOA_MODER_MODE7_1'
+        GPIOA->MODER |=GPIOA_MODER_MODE5_1|GPIOA_MODER_MODE6_1|GPIOA_MODER_MODE7_1;
+                                                               ^
+main.c(49): error: no member named 'MODER' in 'GPIO_TypeDef'
+        GPIOA->MODER &=~(GPIOA_MODER_MODE5_0|GPIO_MODER_MODE6_0|GPIO_MODER_MODE7_0);
+        ~~~~~  ^
+main.c(49): error: use of undeclared identifier 'GPIOA_MODER_MODE5_0'
+        GPIOA->MODER &=~(GPIOA_MODER_MODE5_0|GPIO_MODER_MODE6_0|GPIO_MODER_MODE7_0);
+                         ^
+main.c(49): error: use of undeclared identifier 'GPIO_MODER_MODE6_0'
+        GPIOA->MODER &=~(GPIOA_MODER_MODE5_0|GPIO_MODER_MODE6_0|GPIO_MODER_MODE7_0);
+                                             ^
+main.c(49): error: use of undeclared identifier 'GPIO_MODER_MODE7_0'
+        GPIOA->MODER &=~(GPIOA_MODER_MODE5_0|GPIO_MODER_MODE6_0|GPIO_MODER_MODE7_0);
+                                                                ^
+main.c(50): error: no member named 'OSPEEDR' in 'GPIO_TypeDef'
+        GPIOA->OSPEEDR |=GPIOA_OSPEEDER_OSPEEDR5|GPIO_OSPEEDER_OSPEEDR6|GPIO_OSPEEDER_OSPEEDR7;
+        ~~~~~  ^
+main.c(50): error: use of undeclared identifier 'GPIOA_OSPEEDER_OSPEEDR5'
+        GPIOA->OSPEEDR |=GPIOA_OSPEEDER_OSPEEDR5|GPIO_OSPEEDER_OSPEEDR6|GPIO_OSPEEDER_OSPEEDR7;
+                         ^
+main.c(50): error: use of undeclared identifier 'GPIO_OSPEEDER_OSPEEDR6'
+        GPIOA->OSPEEDR |=GPIOA_OSPEEDER_OSPEEDR5|GPIO_OSPEEDER_OSPEEDR6|GPIO_OSPEEDER_OSPEEDR7;
+                                                 ^
+main.c(50): error: use of undeclared identifier 'GPIO_OSPEEDER_OSPEEDR7'
+        GPIOA->OSPEEDR |=GPIOA_OSPEEDER_OSPEEDR5|GPIO_OSPEEDER_OSPEEDR6|GPIO_OSPEEDER_OSPEEDR7;
+                                                                        ^
+main.c(52): error: no member named 'AFR' in 'GPIO_TypeDef'
+        GPIOA->AFR[0]|=(AF5<<20)|(AF5<<24)|(AF5<<28);
+        ~~~~~  ^
+main.c(43): warning: no previous prototype for function 'SPI_Init' [-Wmissing-prototypes]
+void SPI_Init(void)
+     ^
+main.c(43): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void SPI_Init(void)
+^
+static 
+main.c(62): warning: implicit declaration of function 'millis' is invalid in C99 [-Wimplicit-function-declaration]
+        uint32_t start=millis();
+                       ^
+main.c(62): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        uint32_t start=millis();
+                 ~~~~~ ^~~~~~~~
+main.c(63): warning: implicit conversion loses integer precision: 'volatile uint16_t' (aka 'volatile unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        temp =SPI1->DR;
+             ~~~~~~~^~
+main.c(64): warning: implicit conversion loses integer precision: 'volatile uint16_t' (aka 'volatile unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        temp=SPI1->SR;
+            ~~~~~~~^~
+main.c(67): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                while(!((SPI1->SR)&SPI_SR_TXE)){if(millis()-start>1000){
+                                                   ^~~~~~~~~
+main.c(71): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                while(!(SPI1->SR&SPI_SR_BSY)){if(millis()-start>1000){printf("BSY timed out\r\n");return -1;}}
+                                                 ^~~~~~~~~
+main.c(74): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+while(!((SPI1->SR)&SPI_SR_TXE)){if(millis()-start>1000){printf("TXE2 time dout\r\n");return -1;}}
+                                   ^~~~~~~~~
+main.c(75): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+while((SPI1->SR)&SPI_SR_BSY){if(millis()-start>1000){printf("BSY2 timed out\r\n"); return -1;}}
+                                ^~~~~~~~~
+main.c(76): warning: implicit conversion loses integer precision: 'volatile uint16_t' (aka 'volatile unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+temp =SPI1->DR;
+     ~~~~~~~^~
+main.c(77): warning: implicit conversion loses integer precision: 'volatile uint16_t' (aka 'volatile unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+temp=SPI1->SR;
+    ~~~~~~~^~
+main.c(56): warning: no previous prototype for function 'SPI_Transmit' [-Wmissing-prototypes]
+int8_t SPI_Transmit(uint8_t *data, uint32_t size)
+       ^
+main.c(56): note: declare 'static' if the function is not intended to be used outside of this translation unit
+int8_t SPI_Transmit(uint8_t *data, uint32_t size)
+^
+static 
+main.c(84): warning: implicit declaration of function 'millis' is invalid in C99 [-Wimplicit-function-declaration]
+        uint32_t start=millis();
+                       ^
+main.c(84): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        uint32_t start=millis();
+                 ~~~~~ ^~~~~~~~
+main.c(86): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                while(!(SPI1->SR&SPI_SR_RXNE)){if(millis()-start>200){return -1;}}
+                                                  ^~~~~~~~~
+main.c(87): warning: implicit conversion loses integer precision: 'volatile uint16_t' (aka 'volatile unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                *data++=(SPI1->DR);
+                       ~ ~~~~~~^~
+main.c(80): warning: no previous prototype for function 'SPI_Receive' [-Wmissing-prototypes]
+int8_t SPI_Receive(uint8_t *data, uint32_t size)
+       ^
+main.c(80): note: declare 'static' if the function is not intended to be used outside of this translation unit
+int8_t SPI_Receive(uint8_t *data, uint32_t size)
+^
+static 
+main.c(93): error: conflicting types for 'rc522_init'
+void rc522_init(void)
+     ^
+main.c(13): note: previous implicit declaration is here
+                rc522_init();
+                ^
+main.c(102): error: no member named 'MODER' in 'GPIO_TypeDef'
+  GPIOA->MODER |=GPIO_MODER_MODE8_0;
+  ~~~~~  ^
+main.c(102): error: use of undeclared identifier 'GPIO_MODER_MODE8_0'
+  GPIOA->MODER |=GPIO_MODER_MODE8_0;
+                 ^
+main.c(103): error: no member named 'MODER' in 'GPIO_TypeDef'
+  GPIOA->MODER &=~GPIO_MODER_MODE8_1;
+  ~~~~~  ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+25 warnings and 20 errors generated.
+compiling main.c...
+RTE/Device/STM32F103C8/system_stm32f10x.c(166): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+            ^
+RTE/Device/STM32F103C8/system_stm32f10x.c(166): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+    ^
+1 warning generated.
+compiling system_stm32f10x.c...
+".\Objects\RC552_RF_Reader.axf" - 19 Error(s), 26 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
+                Keil.STM32F1xx_DFP.2.4.1
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\Device\STM32F103C8
+  .\RTE\_RC522_RF
+  C:\Users\INNOLIA F\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include
+  C:\Users\INNOLIA F\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
+      Source file:   Device\Source\ARM\startup_stm32f10x_md.s
+      Source file:   Device\Source\system_stm32f10x.c
+      Include file:  RTE_Driver\Config\RTE_Device.h
+Target not created.
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>
